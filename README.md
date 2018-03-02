@@ -24,7 +24,7 @@ Python 3.5
 ```Python
 from rotated_rect_crop import crop_rotated_rectangle
 # image is the image matrix
-# rect is the rotated rect object in OpenCV, i.e. (center (x,y), (width, height), angle of rotation)
+# rect is the rotated rect object in OpenCV, i.e. (center (x,y), (width, height), angle of clock-wise rotation)
 image_cropped = crop_rotated_rectangle(image, rect)
 ```
 
