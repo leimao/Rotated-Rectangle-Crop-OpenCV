@@ -21,6 +21,8 @@ Python 3.5
 
 ## Usage
 
+In Python or Jupyter Notebook:
+
 ```Python
 from rotated_rect_crop import crop_rotated_rectangle
 # image is the image matrix
@@ -29,5 +31,11 @@ image_cropped = crop_rotated_rectangle(image, rect)
 ```
 
 ## Demo
+
+Generate a random rotated rectangle and crop:
+
+```Shell
+python rotated_rect_crop.py
+```
 
 ![](demo_good.png)

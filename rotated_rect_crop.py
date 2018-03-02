@@ -149,7 +149,7 @@ def crop_rotated_rectangle(image, rect):
 
     crop_center = (rotated_rect_bbx_upright_image.shape[1]//2, rotated_rect_bbx_upright_image.shape[0]//2)
 
-    return rotated_rect_bbx_upright_image[crop_center[1]-rect_height//2 : crop_center[1]+rect_height//2, crop_center[0]-rect_width//2 : crop_center[0]+rect_width//2]
+    return rotated_rect_bbx_upright_image[crop_center[1]-rect_height//2 : crop_center[1]+(rect_height-rect_height//2), crop_center[0]-rect_width//2 : crop_center[0]+(rect_width-rect_width//2)]
 
 
 
@@ -168,15 +168,16 @@ def crop_rotated_rectangle_test():
     #img = np.ones((1000, 1000), dtype=np.uint8)
     #img = cv2.line(img,(400,400),(511,511),2,120)
     #img = cv2.line(img,(300,300),(700,500),2,120)
-    
-    img_rows, img_cols, _ = img.shape
+
+    img_rows = img.shape[0]
+    img_cols = img.shape[1]
     
     # Generate random rect
     
     while True:
-        center = (np.random.randint(low = 0, high = img_cols), np.random.randint(low = 0, high = img_rows))
-        width = np.random.randint(low = 0, high = img_cols)
-        height = np.random.randint(low = 0, high = img_rows)
+        center = (np.random.randint(low = 1, high = img_cols), np.random.randint(low = 0, high = img_rows))
+        width = np.random.randint(low = 1, high = img_cols)
+        height = np.random.randint(low = 1, high = img_rows)
         angle = height = np.random.randint(low = 0, high = 360)
         rect = (center, (width, height), angle)
         if inside_rect(rect = rect, num_cols = img_cols, num_rows = img_rows):
@@ -186,9 +187,6 @@ def crop_rotated_rectangle_test():
 
     box = cv2.boxPoints(rect).astype(np.int0)
     cv2.drawContours(img,[box],0,(255,0,0),3)
-    
-    
-    
     cv2.arrowedLine(img, center, ((box[1][0]+box[2][0])//2,(box[1][1]+box[2][1])//2), (255,0,0), 3, tipLength = 0.2)
 
     image_cropped = crop_rotated_rectangle(image = img, rect = rect)
@@ -217,7 +215,8 @@ def crop_rotated_rectangle_test():
     return
 
 
+if __name__ == '__main__':
 
-
+    crop_rotated_rectangle_test()
 
 
