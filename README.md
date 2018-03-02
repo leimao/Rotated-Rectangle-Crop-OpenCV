@@ -1,0 +1,1 @@
+Rotated_Rectangle_Crop_OpenCV
