@@ -7,7 +7,7 @@ Date: 3/2/2018
 
 ## Introduction
 
-In OpenCV cropping a rectangle from an image is extremely easy. However, it does not provide a function to crop a rotated rectangle. Here I developed an algorithm to crop a rotated rectangle from an image and implemented it as a python function.
+In OpenCV, cropping a rectangle from an image is extremely easy. However, it does not provide a function to crop a rotated rectangle. Here I developed an algorithm to crop a rotated rectangle from an image, and implemented it as a python function.
 
 ## Algorithm
 
