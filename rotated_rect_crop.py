@@ -182,7 +182,7 @@ def crop_rotated_rectangle_test():
         if inside_rect(rect = rect, num_cols = img_cols, num_rows = img_rows):
             break
             
-    print(rect)
+    #print(rect)
 
     box = cv2.boxPoints(rect).astype(np.int0)
     cv2.drawContours(img,[box],0,(255,0,0),3)
@@ -210,7 +210,7 @@ def crop_rotated_rectangle_test():
     ax1.imshow(image_cropped)
 
     plt.tight_layout()
-    plt.savefig('demo.png')
+    plt.savefig('demo.png', dpi=300, bbox_inches='tight')
     
     plt.show()
     
