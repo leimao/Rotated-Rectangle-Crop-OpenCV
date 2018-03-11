@@ -17,7 +17,7 @@ In OpenCV, cropping a rectangle from an image is extremely easy. However, it doe
 
 
 <figure>
-    <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png">
+    <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png" width="40%">
     <figcaption>Step 1</figcaption>
 </figure>
 
