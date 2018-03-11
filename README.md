@@ -22,6 +22,21 @@ In OpenCV, cropping a rectangle from an image is extremely easy. However, it doe
 </figure>
 
 
+<div class>
+<figure>
+    <img id = "example" src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png">
+    <figcaption>Step 1</figcaption>
+</figure>
+<style>
+#example {
+  display: block;
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+}
+</style>
+</div>
+
 ## Dependencies
 
 OpenCV 3.0
