@@ -13,27 +13,19 @@ In OpenCV, cropping a rectangle from an image is extremely easy. However, it doe
 
 
 <p align="center">
-<figure>
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png" width="60%">
-</figure>
 </p>
 
 <p align="center">
-<figure>
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_2.png" width="60%">
-</figure>
 </p>
 
 <p align="center">
-<figure>
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_3.png" width="60%">
-</figure>
 </p>
 
 <p align="center">
-<figure>
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_4.png" width="60%">
-</figure>
 </p>
 
 ## Dependencies
@@ -64,7 +56,5 @@ python rotated_rect_crop.py
 ![](demo/demo_good.png)
 
 <p align="center">
-<figure>
-    <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/demo/demo_good.png" width="60%">
-</figure>
+    <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/demo/demo_good.png">
 </p>
