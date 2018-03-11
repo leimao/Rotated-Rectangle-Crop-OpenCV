@@ -11,18 +11,25 @@ In OpenCV, cropping a rectangle from an image is extremely easy. However, it doe
 
 ## Algorithm
 
+Original image and the rotated rectangle:
 
 <p align="center">
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png" width="60%">
 </p>
 
+Crop a minimal up-right rectangle containing the rotated rectangle:
+
 <p align="center">
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_2.png" width="60%">
 </p>
 
+Rotate the cropped image such that the inner rotated rectangle becomes up-right and centered in the image:
+
 <p align="center">
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_3.png" width="60%">
 </p>
+
+Crop the "rotated rectangle":
 
 <p align="center">
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_4.png" width="60%">
@@ -52,8 +59,6 @@ Generate a random rotated rectangle and crop:
 ```Shell
 python rotated_rect_crop.py
 ```
-
-![](demo/demo_good.png)
 
 <p align="center">
     <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/demo/demo_good.png">
