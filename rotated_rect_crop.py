@@ -162,7 +162,7 @@ def crop_rotated_rectangle_test():
 
     # Better to test in Jupyter Notebook
 
-    img = cv2.imread('pokemon.png')
+    img = cv2.imread('demo/pokemon.png')
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     #img = np.ones((1000, 1000), dtype=np.uint8)

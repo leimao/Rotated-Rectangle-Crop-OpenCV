@@ -38,4 +38,8 @@ Generate a random rotated rectangle and crop:
 python rotated_rect_crop.py
 ```
 
-![](demo_good.png)
+![](demo/demo_good.png)
+
+<p align="center">
+  <img src="https://github.com/leimao/TTIC_Deep_Learning_2018_Pareto_Competition/blob/master/paretopoint.png" alt="Pareto Points"/>
+</p>
