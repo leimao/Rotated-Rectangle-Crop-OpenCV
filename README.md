@@ -11,7 +11,16 @@ In OpenCV, cropping a rectangle from an image is extremely easy. However, it doe
 
 ## Algorithm
 
-TBD.
+<p align="center">
+  <img src="https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png"/>
+</p>
+
+
+<figure>
+    <img src = "https://github.com/leimao/Rotated_Rectangle_Crop_OpenCV/blob/master/algorithm/alg_step_1.png">
+    <figcaption>Step 1</figcaption>
+</figure>
+
 
 ## Dependencies
 
@@ -39,7 +48,3 @@ python rotated_rect_crop.py
 ```
 
 ![](demo/demo_good.png)
-
-<p align="center">
-  <img src="https://github.com/leimao/TTIC_Deep_Learning_2018_Pareto_Competition/blob/master/paretopoint.png" alt="Pareto Points"/>
-</p>
