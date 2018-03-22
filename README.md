@@ -49,6 +49,7 @@ In Python or Jupyter Notebook:
 from rotated_rect_crop import crop_rotated_rectangle
 # image is the image matrix
 # rect is the rotated rect object in OpenCV, i.e. (center (x,y), (width, height), angle of clock-wise rotation)
+# The angle vector pointing to the "north" is exactly 0 degree. 
 image_cropped = crop_rotated_rectangle(image, rect)
 ```
 
