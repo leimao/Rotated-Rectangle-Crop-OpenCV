@@ -178,7 +178,7 @@ def crop_rotated_rectangle_test():
         center = (np.random.randint(low = 1, high = img_cols), np.random.randint(low = 0, high = img_rows))
         width = np.random.randint(low = 1, high = img_cols)
         height = np.random.randint(low = 1, high = img_rows)
-        angle = height = np.random.randint(low = 0, high = 360)
+        angle = np.random.randint(low = -360, high = 360)
         rect = (center, (width, height), angle)
         if inside_rect(rect = rect, num_cols = img_cols, num_rows = img_rows):
             break
