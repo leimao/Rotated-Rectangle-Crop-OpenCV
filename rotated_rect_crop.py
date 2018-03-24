@@ -12,6 +12,7 @@ def inside_rect(rect, num_cols, num_rows):
     # rect tuple
     # center (x,y), (width, height), angle of rotation (to the row)
     # center  The rectangle mass center.
+    # center tuple (x, y): x is regarding to the width (number of columns) of the image, y is regarding to the height (number of rows) of the image.
     # size    Width and height of the rectangle.
     # angle   The rotation angle in a clockwise direction. When the angle is 0, 90, 180, 270 etc., the rectangle becomes an up-right rectangle.
     # Return:
@@ -34,10 +35,10 @@ def inside_rect(rect, num_cols, num_rows):
     # https://docs.opencv.org/3.0-beta/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
     box = cv2.boxPoints(rect)
 
-    x_max = np.max(box[:,0])
-    x_min = np.min(box[:,0])
-    y_max = np.max(box[:,1])
-    y_min = np.min(box[:,1])
+    x_max = int(np.max(box[:,0]))
+    x_min = int(np.min(box[:,0]))
+    y_max = int(np.max(box[:,1]))
+    y_min = int(np.min(box[:,1]))
 
     if (x_max <= num_cols) and (x_min >= 0) and (y_max <= num_rows) and (y_min >= 0):
         return True
@@ -53,10 +54,10 @@ def rect_bbx(rect):
 
     box = cv2.boxPoints(rect)
 
-    x_max = np.max(box[:,0])
-    x_min = np.min(box[:,0])
-    y_max = np.max(box[:,1])
-    y_min = np.min(box[:,1])
+    x_max = int(np.max(box[:,0]))
+    x_min = int(np.min(box[:,0]))
+    y_max = int(np.max(box[:,1]))
+    y_min = int(np.min(box[:,1]))
 
     # Top-left
     # (x_min, y_min)
@@ -120,7 +121,7 @@ def crop_rectangle(image, rect):
     rect_height = rect[1][1]
 
 
-    return image[rect_center_y-rect_height//2:rect_center_y+rect_height//2, rect_center_x-rect_width//2:rect_center_x+rect_width//2]
+    return image[rect_center_y-rect_height//2:rect_center_y+rect_height-rect_height//2, rect_center_x-rect_width//2:rect_center_x+rect_width-rect_width//2]
 
 
 
@@ -178,7 +179,7 @@ def crop_rotated_rectangle_test():
         center = (np.random.randint(low = 1, high = img_cols), np.random.randint(low = 0, high = img_rows))
         width = np.random.randint(low = 1, high = img_cols)
         height = np.random.randint(low = 1, high = img_rows)
-        angle = np.random.randint(low = -360, high = 360)
+        angle = height = np.random.randint(low = 0, high = 360)
         rect = (center, (width, height), angle)
         if inside_rect(rect = rect, num_cols = img_cols, num_rows = img_rows):
             break
